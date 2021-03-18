@@ -11,28 +11,38 @@
 
 <script>
 
+    function pulaLinha(){
+        document.write("<br>")
+    }
+
+    function mostraTexto(parametro){
+        document.write(parametro)
+        pulaLinha()
+    }
+
     var ano = 2021;
 
-    document.write("Flávio tem " + (ano - 1977) + " anos");
-    document.write("<br>");
-    document.write("Joaquim tem " + (ano - 1996) + " anos");
-    document.write("<br>");
-    document.write("Barney tem " + (ano - 1976) + " anos");
-    document.write("<br> <br>");
+    mostraTexto("Flávio tem " + (ano - 1977) + " anos");
+    
+    mostraTexto("Joaquim tem " + (ano - 1996) + " anos");
+    
+    mostraTexto("Barney tem " + (ano - 1976) + " anos");
+    
 
     var idadeFlavio = 44;
     var idadeJoaquim = 25;
     var idadeBarney = 45;
     var media = (idadeFlavio + idadeJoaquim + idadeBarney) / 3;
-
-    document.write("A média das idades é " + Math.round(media) + " anos.");
+    
+    mostraTexto("A média das idades é " + Math.round(media) + " anos.");
 
     var nome = "Flávio";
-
-    document.write ("<br> A idade de " + nome  + " é " + idadeFlavio)
+  
+    mostraTexto ("A idade de " + nome  + " é " + idadeFlavio)
 
     var totalIdades = (idadeFlavio + idadeJoaquim + idadeBarney);
-    document.write ("<br> O total da idade entre eles é " + totalIdades + " anos.")
+    
+    mostraTexto ("O total da idade entre eles é " + totalIdades + " anos.")
 
 </script>
 </body>
