@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+        document.write("<br><hr><br>")
+    }
+
+    function mostraTexto(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+    function calculaImc(peso, altura){
+        return peso / (altura * altura);
+         
+    }
+   
+    var nome = prompt("Informe seu nome: ");
+    var alturaInformada = prompt (nome + " qual sua altura: ");
+    var pesoInformado = prompt (nome + " qual seu peso: ");
+    
+    var imc = calculaImc(pesoInformado, alturaInformada);
+
+    mostraTexto( nome + " seu IMC atual é " + imc);
+
+    if (imc < 18.5){
+        mostraTexto( "Você está abaixo do recomendado.");
+    }
+    if (imc>35){
+        mostraTexto( "Você está acima do recomendado.");
+    }
+    if (imc >=18.5 && imc <= 35){
+        mostraTexto( "Você está dentro do recomendado.");
+    }
+    
+    </script>
+</body>
+</html>
