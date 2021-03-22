@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+        document.write("<br><hr><br>")
+    }
+
+    function mostraTexto(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+    var contador = 30;
+
+    while (contador <= 40){
+        mostraTexto (contador)
+        contador = contador + 1;
+            if (contador == 33){
+                mostraTexto ("Este número não pode aparecer!")
+                contador = contador + 1;
+            } 
+            if (contador == 37){
+                mostraTexto ("Este número não pode aparecer!")
+                contador = contador + 1;
+            }
+        
+    }
+
+    mostraTexto("Fim!")
+    
+    </script>
+</body>
+</html>

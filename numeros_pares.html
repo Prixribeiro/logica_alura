@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+        document.write("<br><hr><br>")
+    }
+
+    function mostraTexto(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+    var contador = 0;
+
+    while (contador <= 100){
+        mostraTexto (contador)
+        contador = contador + 2;
+    }
+
+    mostraTexto("Fim!")
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+        document.write("<br><hr><br>")
+    }
+
+    function mostraTexto(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+    
+    for (var multiplicador = 1; multiplicador <= 10; multiplicador ++){
+        mostraTexto ( 7 * multiplicador);
+    }
+    mostraTexto ("FIM")
+
+    
+    mostraTexto("***************************************************************************************************************")
+    
+    var i = 0
+    while (i < 10) {
+        mostraTexto( "O resultado é " + (2 * i) );
+        i++;
+    }
+    
+    </script>
+</body>
+</html>

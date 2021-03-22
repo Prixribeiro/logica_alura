@@ -20,18 +20,21 @@
         return Math.round(Math.random() * n)
     }
 
-    var numeroPensado = sorteia(100)
-    var chute = parseInt(prompt("de 0 a 100, qual número você acha que eu pensei?"));
+    var numeroPensado = sorteia(100);
+    var tentativas = 1;
+    while (tentativas <= 5){
+        var chute = parseInt(prompt("Você tem 5 tentativas para descobrir que número eu pensei entre 0 a 100. VALENDO... "));
 
-    if ( chute == numeroPensado){
-        mostraTexto ("VOCÊ ACERTOU!!!");
-    } 
-    if (chute > numeroPensado) {
-        mostraTexto ("Você errou! O número pensado foi menor que seu chute. Eu pensei no número " + numeroPensado);
+        if ( chute == numeroPensado){
+            mostraTexto ("VOCÊ ACERTOU!!!");
+            break;
+        } else {
+            mostraTexto ("Você errou!");
+        }
+        
+        tentativas++;
     }
-    if (chute < numeroPensado) {
-        mostraTexto ("Você errou! O número pensado foi maior que seu chute. Eu pensei no número " + numeroPensado);
-    }
+    mostraTexto("O número pensado era " + numeroPensado);
     
     </script>
 </body>

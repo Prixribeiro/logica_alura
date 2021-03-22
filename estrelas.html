@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+        document.write("<br><hr><br>")
+    }
+
+    function mostraTexto(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+    for (var linha = 1; linha <= 10; linha++){
+        for (var coluna = 1; coluna <=10; coluna++){
+            document.write("5 x " + linha + " = " + 5*linha);
+            pulaLinha();
+            break;
+        }
+        
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+        document.write("<br><hr><br>")
+    }
+
+    function mostraTexto(frase){
+        document.write(frase)
+        pulaLinha()
+    }
+
+    var ano_copa = 1930;
+
+    while (ano_copa <= 2021){
+        mostraTexto ("Teve Copa no Brasil em " + ano_copa)
+        ano_copa = ano_copa + 4;
+    }
+
+    mostraTexto("Fim!")
+    
+    </script>
+</body>
+</html>

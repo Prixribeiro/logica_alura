@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <h2>Tente descobrir o segredo do meu cofre! [****]</h2>
+    <input/>
+    <button>Compare com meu segredo</button>
+
+    <script>
+
+        function sorteia(){
+            return Math.round(Math.random() * 100);
+        }
+
+        function sorteiaNumero(quantidade){
+            var segredos = [];
+            var i = 1;
+
+            while (i <= quantidade){
+
+                var numeroAleatorio = sorteia();
+                var achou = false;
+
+                for (var posicao = 0; posicao < segredos.length; posicao++){
+                    if (segredos [posicao] == numeroAleatorio){
+                        achou = true;
+                        break;
+                    }
+                }
+                if (achou == false){
+                    segredos.push(numeroAleatorio);
+                    i++;
+                }
+                 
+            }
+            return segredos;
+        }
+
+        var segredos = sorteiaNumero(3);
+
+        var input = document.querySelector("input");
+        input.focus();
+
+        var achou = false;
+
+        function verifica(){
+            for (var posicao = 0; posicao < segredos.length ; posicao++){
+                if (input.value == segredos[posicao]){
+                alert("Você acertou!!! Cofre aberto!! ");
+                achou = true;
+                break;
+                } 
+            }
+            if (achou == false){
+                    alert ("Você ERROU!");
+            }
+
+            input.value = "";
+            input.focus();
+        }
+
+        var button = document.querySelector("button");
+        button.onclick = verifica;
+        
+        
+    </script>
+</body>
+</html>
